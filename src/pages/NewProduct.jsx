@@ -20,7 +20,8 @@ const NewProduct = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.prevent.Default();
+    e.preventDefault();
+    console.log("handleSubmit");
     try {
       await axios.post(BASE_URL, formData);
       setFormData(initialState);

@@ -99,7 +99,7 @@ const ProductCard = ({ item, getProducts }) => {
             <div className="mt-2">
               Product Total: $
               <span className="product-line-price">
-                {amount * price * dampingRate}
+                {(amount * price * dampingRate).toFixed(2)}
               </span>
             </div>
           </div>
