@@ -32,7 +32,7 @@ const ProductList = () => {
         {loading ? (
           <p className="text-center text-danger w-100">Loading....</p>
         ) : errorState ? (
-          <p className="text-center text-danger w-100">404 Error Occured</p>
+          <p className="text-center text-danger w-100">404 Error Occured !</p>
         ) : products.length ? (
           <>
             <article id="product-panel" className="col-md-5">
