@@ -37,14 +37,18 @@ const ProductList = () => {
         ) : products.length ? (
           <>
             <article id="product-panel" className="col-md-5">
-              {products.map((item)=> {
+              {products.map((item) => {
                 return (
-                  <ProductCard item={item} key={item.id}/>
-                )
+                  <ProductCard
+                    item={item}
+                    key={item.id}
+                    getProducts={getProducts}
+                  />
+                );
               })}
             </article>
             <article className="col-md-5 m-3">
-              <CardTotal />
+              <CardTotal products={products} />
             </article>
           </>
         ) : (
