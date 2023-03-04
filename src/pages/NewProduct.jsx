@@ -36,6 +36,7 @@ const NewProduct = () => {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         formData={formData}
+        text={"New"}
       />
     </div>
   );

@@ -1,9 +1,9 @@
 
-const ProductForm = ({ formData,handleChange,handleSubmit }) => {
+const ProductForm = ({ formData,handleChange,handleSubmit, text }) => {
   
   return (
     <article id="add-product" className="mb-4 mt-4">
-      <h1 className="text-center">Product</h1>
+      <h1 className="text-center">{text}</h1>
       <form className="p-2" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="add-name" className="form-label">
@@ -63,7 +63,7 @@ const ProductForm = ({ formData,handleChange,handleSubmit }) => {
         </div>
         <div className="text-center">
           <button type="submit" className="add-to-cart btn btn-success btn-sm">
-            <i className="fa-solid fa-cart-plus me-2"></i>Save To Product
+            <i className="fa-solid fa-cart-plus me-2"></i>Save To {text}
           </button>
         </div>
       </form>
