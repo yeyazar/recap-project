@@ -13,10 +13,11 @@ const ProductList = () => {
     // console.log("Started");
     try {
       const { data } = await axios(BASE_URL);
-      setProducts(data);
       setLoading(false);
+      setProducts(data);
       console.log(data);
     } catch (error) {
+      setLoading(false);
       setErrorState(true);
       console.log(error);
     }
@@ -36,7 +37,11 @@ const ProductList = () => {
         ) : products.length ? (
           <>
             <article id="product-panel" className="col-md-5">
-              <ProductCard />
+              {products.map((item)=> {
+                return (
+                  <ProductCard item={item} key={item.id}/>
+                )
+              })}
             </article>
             <article className="col-md-5 m-3">
               <CardTotal />
